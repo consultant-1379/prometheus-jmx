@@ -1,0 +1,21 @@
+lowercaseOutputName: true
+
+rules:
+
+- pattern : java.lang<type=(.*)>
+- pattern : kafka.network<type=SocketServer, name=(.+)><>Value
+- pattern : kafka.server<type=KafkaRequestHandlerPool, name=(.+)><>FiveMinuteRate
+- pattern : kafka.server<type=ReplicaManager, name=(.+)><>(Value|Count)
+- pattern : kafka.server<type=DelayedOperationPurgatory, name=(.+), delayedOperation=(.+)><>Value
+- pattern : kafka.controller<type=KafkaController, name=(.+)><>Value
+- pattern : kafka.controller<type=ControllerStats, name=(.+)><>(50thPercentile|FiveMinuteRate)
+- pattern : kafka.network<type=RequestChannel, name=(.+)><>Value
+- pattern : kafka.network<type=RequestMetrics, name=RequestsPerSec, request=(.+)><>(OneMinuteRate|99thPercentile|Count)
+- pattern : kafka.network<type=SocketServer, name=(.+)><>Value
+- pattern : kafka.server<type=SessionExpireListener, name=(.+)><>Count
+- pattern : kafka.server<type=BrokerTopicMetrics, name=(.+), topic=(.+)><>(OneMinuteRate|Count)
+- pattern : kafka.server<type=ReplicaManager, name=(.+)><>Value
+- pattern : kafka.server<type=KafkaRequestHandlerPool, name=(.+)><>(OneMinuteRate|FiveMinuteRate)
+- pattern : kafka.server<type=FetcherLagMetrics, name=(.+), clientId=(.+), topic=(.+), partition=(.*)><>Value
+- pattern: kafka.consumer<type=consumer-fetch-manager-metrics, partition=(.+), topic=(.+), client-id=(.+)><>records-lag
+- pattern : kafka.log<type=Log, name=(.+), topic=(.+), partition=(.+)><>Value

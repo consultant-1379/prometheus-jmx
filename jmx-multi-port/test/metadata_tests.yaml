@@ -1,0 +1,10 @@
+schemaVersion: "2.0.0"
+
+# Verifies that the container has the correct:
+# - exposed ports
+# - entrypoint
+# - environment variables
+
+metadataTest:
+  entrypoint: ["usr/local/bin/dumb-init", "/opt/jmx_exporter/start.sh"]
+

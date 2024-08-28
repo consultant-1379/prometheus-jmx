@@ -1,0 +1,398 @@
+dependencies:
+- ID: org.hamcrest:hamcrest-core
+  name: Hamcrest Core
+  primary: this
+  type: FOSS
+  versions:
+  - '1.3'
+  selected_license: BSD-2-Clause
+  licenses:
+  - BSD-2-Clause
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core
+    community_url: https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core
+    community_link: https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core
+    component_name: Hamcrest Core
+    component_version: '1.3'
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: Hamcrest Core
+        URL: https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core
+      licenses:
+      - BSD-2-Clause
+      loc:
+        fetcher: mvn
+        package: org.hamcrest:hamcrest-core
+        revision: '1.3'
+- ID: junit:junit
+  name: JUnit
+  primary: this
+  type: FOSS
+  versions:
+  - '4.11'
+  selected_license: CPL-1.0
+  licenses:
+  - CPL-1.0
+  - unknown
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: http://junit.org
+    community_url: http://junit.org
+    community_link: http://junit.org
+    component_name: JUnit
+    component_version: '4.11'
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: JUnit
+        URL: http://junit.org
+      licenses:
+      - CPL-1.0
+      - unknown
+      loc:
+        fetcher: mvn
+        package: junit:junit
+        revision: '4.11'
+- ID: junit:junit
+  name: JUnit
+  primary: this
+  type: FOSS
+  versions:
+  - '4.12'
+  selected_license: EPL-1.0
+  licenses:
+  - EPL-1.0
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: http://junit.org
+    community_url: http://junit.org
+    community_link: http://junit.org
+    component_name: JUnit
+    component_version: '4.12'
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: JUnit
+        URL: http://junit.org
+      licenses:
+      - EPL-1.0
+      loc:
+        fetcher: mvn
+        package: junit:junit
+        revision: '4.12'
+- ID: io.prometheus:simpleclient
+  name: Prometheus Java Simpleclient
+  primary: this
+  type: FOSS
+  versions:
+  - 0.3.0
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  - public-domain
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+    community_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+    community_link: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+    component_name: Prometheus Java Simpleclient
+    component_version: 0.3.0
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: Prometheus Java Simpleclient
+        URL: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+      licenses:
+      - Apache-2.0
+      - public-domain
+      loc:
+        fetcher: mvn
+        package: io.prometheus:simpleclient
+        revision: 0.3.0
+- ID: io.prometheus:simpleclient_common
+  name: Prometheus Java Simpleclient Common
+  primary: this
+  type: FOSS
+  versions:
+  - 0.3.0
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+    community_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+    community_link: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+    component_name: Prometheus Java Simpleclient Common
+    component_version: 0.3.0
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: Prometheus Java Simpleclient Common
+        URL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+      licenses:
+      - Apache-2.0
+      loc:
+        fetcher: mvn
+        package: io.prometheus:simpleclient_common
+        revision: 0.3.0
+- ID: io.prometheus:simpleclient_hotspot
+  name: Prometheus Java Simpleclient Hotspot
+  primary: this
+  type: FOSS
+  versions:
+  - 0.3.0
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+    community_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+    community_link: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+    component_name: Prometheus Java Simpleclient Hotspot
+    component_version: 0.3.0
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: Prometheus Java Simpleclient Hotspot
+        URL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+      licenses:
+      - Apache-2.0
+      loc:
+        fetcher: mvn
+        package: io.prometheus:simpleclient_hotspot
+        revision: 0.3.0
+- ID: io.prometheus:simpleclient_httpserver
+  name: Prometheus Java Simpleclient Httpserver
+  primary: this
+  type: FOSS
+  versions:
+  - 0.3.0
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+    community_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+    community_link: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+    component_name: Prometheus Java Simpleclient Httpserver
+    component_version: 0.3.0
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: Prometheus Java Simpleclient Httpserver
+        URL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+      licenses:
+      - Apache-2.0
+      loc:
+        fetcher: mvn
+        package: io.prometheus:simpleclient_httpserver
+        revision: 0.3.0
+- ID: org.yaml:snakeyaml
+  name: SnakeYAML
+  primary: this
+  type: FOSS
+  versions:
+  - '1.31'
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - EPL-1.0
+  - GPL-2.0-or-later
+  - LGPL-2.1-or-later
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: http://www.snakeyaml.org
+    community_url: http://www.snakeyaml.org
+    community_link: http://www.snakeyaml.org
+    component_name: SnakeYAML
+    component_version: '1.31'
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: SnakeYAML
+        URL: http://www.snakeyaml.org
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - EPL-1.0
+      - GPL-2.0-or-later
+      - LGPL-2.1-or-later
+      loc:
+        fetcher: mvn
+        package: org.yaml:snakeyaml
+        revision: '1.31'
+- ID: dumb-init
+  name: dumb-init
+  primary: this
+  type: FOSS
+  versions:
+  - 1.2.1
+  selected_license: MIT
+  licenses:
+  - MIT
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'no'
+    prim: '1/CTX102224'
+    community_name: https://github.com/Yelp/dumb-init
+    community_url: https://github.com/Yelp/dumb-init
+    community_link: https://github.com/Yelp/dumb-init
+    component_name: dumb-init
+    component_version: 1.2.2
+    src_download_link: http://gask2web.ericsson.se/pub/get?DocNo=19012-1/CTX1022240
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Python
+    component_comment: ''
+- ID: io.prometheus.jmx:collector
+  name: collector
+  primary: this
+  type: FOSS
+  versions:
+  - 0.3.1
+  selected_license: Apache-2.0
+  licenses:
+  - Apache-2.0
+  encryptions:
+    used:
+    - ''
+  bazaar:
+    register: 'yes'
+    prim: ''
+    community_name: http://github.com/prometheus/jmx_exporter
+    community_url: http://github.com/prometheus/jmx_exporter
+    community_link: http://github.com/prometheus/jmx_exporter
+    component_name: collector
+    component_version: 0.3.1
+    src_download_link: MANDATORY_FOR_BAZAAR_REGISTRATION
+    component_platform: linux
+    component_highlevel_description: ''
+    component_programing_language: Java
+    component_comment: ''
+  evms:
+    register: 'yes'
+    vendor: MANDATORY_FOR_EVMS_REGISTRATION
+  additional_info:
+    fossa:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Project:
+        Title: collector
+        URL: http://github.com/prometheus/jmx_exporter
+      licenses:
+      - Apache-2.0
+      loc:
+        fetcher: mvn
+        package: io.prometheus.jmx:collector
+        revision: 0.3.1

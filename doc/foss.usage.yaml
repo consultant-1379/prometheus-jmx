@@ -1,0 +1,25 @@
+modelVersion: 2.0
+fosses:
+    # JMX Exporter
+  - product_number: CTX1022177
+    # Selected License
+    license: Apache-2.0
+    # Explain how license obligations are fulfilled (Max 1000 characters, no linefeed)
+    obligation: |
+      Including the full license text in a prominent place with the software when
+      the FOSS is distributed. This fulfills the following:
+      Ericsson must give any recipients of the software a copy of the Apache License.
+      Ericsson must cause any modified files to carry prominent notices stating that Ericsson changed the files.
+      In any source form Ericsson distributes, all copyright, patent, trademark and attribution notices must be retained.
+      If the software includes a NOTICE text file as part of its distribution,
+      then any derivative work Ericsson distributes must include a readable copy of the attribution notices contained within such NOTICE file
+    # Explain how the FOSS is used (Max 1000 characters)
+    usage: |
+      This FOSS evaluation concerns the free open software called JMX Exporter.
+      JMX to Prometheus exporter: a collector that can configurably scrape and expose mBeans of a JMX target.
+      This exporter is intended to be run as a Java Agent, exposing a HTTP server and serving metrics of the local JVM.
+      It can be also run as an independent HTTP server and scrape remote JMX targets, but this has various disadvantages,
+      such as being harder to configure and being unable to expose process metrics (e.g., memory and CPU usage).
+      Running the exporter as a Java Agent is thus strongly encouraged.
+    # Possible options: Static, Dynamic or Classpath
+    linking: Classpath

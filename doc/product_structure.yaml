@@ -1,0 +1,54 @@
+modelVersion: "2.0"
+flavor: "Generic"
+service:
+  # name of the service:
+  name: "JMX Exporter"
+
+  # Design Country (set on the source products)
+  design_countries:
+   - IE                 # Ireland
+
+  # Compilation Country (Set on the derivative products)
+  sw_compilation_country: SE
+
+  # Release responsible
+  release_responsible: BCSDBECH
+
+  #  Design responsible
+  design_responsible: BCSDBECH
+
+  # using "Completed" when encryption is not changed compared to previous released version.
+  encryption_status: Completed
+
+  # Bookmarks
+  bookmark: PRIM
+
+  src_products:
+    # Source Code Product
+    - label: Source
+      number: CAV 101 844
+
+  derivative_products:
+    - label: "JMX Exporter Image"
+      number: "CXC 201 2016"
+      description: "JMX Exporter"
+      includes:
+        # Common Base OS
+        - munin: CXC 201 2032
+          version: 6.17.0
+          secondPartyProduct: "True"
+        # Common Base OS
+        - munin: CXC 201 2031
+          version: 6.17.0
+          secondPartyProduct: "True"
+        # STDOUT-REDIRECT SW Library 1.38.0
+        - prim: CXA 301 76/1
+          rstate: R39A
+      uses_foss:
+        - dependencies_file: jmx-dependencies.yaml
+        # FOSS Usage YAML, optional only needed if you make changes to a 3PP
+        - foss_usage: foss.usage.yaml
+      #uses_encryption:
+        #- import: encryptions.yaml
+      derivedFrom:
+        munin: CAV 101 844

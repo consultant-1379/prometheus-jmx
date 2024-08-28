@@ -1,0 +1,792 @@
+modelVersion: '3.0'
+dependencies:
+- ID: io.prometheus.jmx:collector+0.20.0
+  additional_info:
+    fossa-attribution:
+      Description: See https://github.com/prometheus/jmx_exporter/blob/master/README.md
+      Package: io.prometheus.jmx:collector
+      Source: mvn
+      Version: 0.20.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus JMX Exporter - Collector
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/jmx/collector/0.20.0/collector-0.20.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '13/CTX1022177'
+    community_link: http://github.com/prometheus/jmx_exporter
+    community_name: http://github.com/prometheus/jmx_exporter
+    community_url: http://github.com/prometheus/jmx_exporter
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Prometheus JMX Exporter - Collector
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.20.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/prometheus/jmx/collector/0.20.0/collector-0.20.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus.jmx_collector
+    target_sw: linux
+    vendor: mvn
+    version: 0.20.0
+    web_url: http://github.com/prometheus/jmx_exporter
+  licenses:
+  - Apache-2.0
+  name: Prometheus JMX Exporter - Collector
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.20.0
+  mimer:
+    linking: Classpath
+    product_number: 'CTX1022177'
+    product_version_label: 0.20.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  additional_info:
+    fossa-attribution:
+      Description: See https://github.com/prometheus/jmx_exporter/blob/master/README.md
+      Package: io.prometheus.jmx:jmx_prometheus_common
+      Source: mvn
+      Version: 0.20.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus JMX Exporter - Common
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_common/0.20.0/jmx_prometheus_common-0.20.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '13/CTX1022177'
+    community_link: http://github.com/prometheus/jmx_exporter
+    community_name: http://github.com/prometheus/jmx_exporter
+    community_url: http://github.com/prometheus/jmx_exporter
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Prometheus JMX Exporter - Common
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.20.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_common/0.20.0/jmx_prometheus_common-0.20.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus.jmx_jmx_prometheus_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.20.0
+    web_url: http://github.com/prometheus/jmx_exporter
+  licenses:
+  - Apache-2.0
+  name: Prometheus JMX Exporter - Common
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.20.0
+  mimer:
+    linking: Classpath
+    product_number: 'CTX1022177'
+    product_version_label: 0.20.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Core instrumentation library for the simpleclient.
+      Package: io.prometheus:simpleclient
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - CC0-1.0
+      Title: Prometheus Java Simpleclient
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient/0.16.0/simpleclient-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+  licenses:
+  - Apache-2.0
+  - CC0-1.0
+  name: Prometheus Java Simpleclient
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_common+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Common code used by various modules of the Simpleclient.
+      Package: io.prometheus:simpleclient_common
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Common
+      DownloadURL: https://arm.seli.gic.ericsson.se/artifactory/proj-eof-dev/io/prometheus/simpleclient_common/0.16.0/simpleclient_common-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Common
+  primary:
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_hotspot+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Collectors of data from Java Hotspot.
+      Package: io.prometheus:simpleclient_hotspot
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Hotspot
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot/0.16.0/simpleclient_hotspot-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_hotspot
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Hotspot
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_httpserver+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Httpserver exposition for the simpleclient.
+      Package: io.prometheus:simpleclient_httpserver
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Httpserver
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver/0.16.0/simpleclient_httpserver-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_httpserver
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Httpserver
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_tracer_common+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_common
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - Common
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_common/0.16.0/simpleclient_tracer_common-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_common
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - Common
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_tracer_otel+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_otel
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - OpenTelemetry
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/io/prometheus/simpleclient_tracer_otel/0.16.0/simpleclient_tracer_otel-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_otel
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - OpenTelemetry
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_tracer_otel_agent+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_otel_agent
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - OpenTelemetry Agent
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel_agent/0.16.0/simpleclient_tracer_otel_agent-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_otel_agent
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel_agent
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - OpenTelemetry Agent
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: net.bytebuddy:byte-buddy+1.12.21
+  additional_info:
+    fossa-attribution:
+      Description: Byte Buddy is a Java library for creating Java classes at run time.        This
+        artifact is a build of Byte Buddy with all ASM dependencies repackaged into
+        its own name space.
+      Package: net.bytebuddy:byte-buddy
+      Source: mvn
+      Version: 1.12.21
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: Byte Buddy (without dependencies)
+      DownloadURL: https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 83/CAX1059816
+    community_link: https://github.com/raphw/byte-buddy
+    community_name: https://github.com/raphw/byte-buddy
+    community_url: https://github.com/raphw/byte-buddy
+    component_comment: ''
+    component_highlevel_description: Byte Buddy is a code generation and manipulation
+      library for creating and modifying Java classes during the runtime of a Java
+      application and without the help of a compiler.
+    component_name: Byte Buddy
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.12.21
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/raphw/byte-buddy/archive/byte-buddy-1.12.21.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1043448&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Norway
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: net.bytebuddy_byte-buddy
+    target_sw: linux
+    vendor: mvn
+    version: 1.12.21
+    web_url: https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: Byte Buddy (without dependencies)
+  primary:
+  - org.assertj:assertj-core+3.24.2
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 1.12.21
+  mimer:
+    linking: Classpath
+    product_number: CAX1059816
+    product_version_label: 1.12.21
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.assertj:assertj-core+3.24.2
+  additional_info:
+    fossa-attribution:
+      Description: Rich and fluent assertions for testing in Java
+      Package: org.assertj:assertj-core
+      Source: mvn
+      Version: 3.24.2
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: AssertJ Core
+      DownloadURL: https://repo1.maven.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 30/CAX1059199
+    community_link: https://github.com/joel-costigliola/assertj-core
+    community_name: https://github.com/joel-costigliola/assertj-core
+    community_url: https://github.com/joel-costigliola/assertj-core
+    component_comment: ''
+    component_highlevel_description: AssertJ core is a Java library that provides
+      a fluent interface for writing assertions. Its main goal is to improve test
+      code readability and make maintenance of tests easier.
+    component_name: AssertJ Core
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/assertj/assertj/archive/refs/tags/assertj-build-3.24.2.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=931673&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: New Zealand
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.assertj_assertj-core
+    target_sw: linux
+    vendor: mvn
+    version: 3.24.2
+    web_url: https://assertj.github.io/doc/#assertj-core
+  licenses:
+  - Apache-2.0
+  name: AssertJ Core
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.24.2
+  mimer:
+    linking: Classpath
+    product_number: CAX1059199
+    product_version_label: 3.24.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: org.yaml:snakeyaml+2.0
+  additional_info:
+    fossa-attribution:
+      Description: YAML 1.1 parser and emitter for Java
+      Package: org.yaml:snakeyaml
+      Source: mvn
+      Version: '2.0'
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - EPL-1.0
+      - GPL-2.0-or-later
+      - LGPL-2.1-or-later
+      Title: SnakeYAML
+      DownloadURL: https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.0/snakeyaml-2.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 27/CAX1056807
+    community_link: https://bitbucket.org/snakeyaml/snakeyaml
+    community_name: https://bitbucket.org/snakeyaml/snakeyaml
+    community_url: https://bitbucket.org/snakeyaml/snakeyaml
+    component_comment: ''
+    component_highlevel_description: SnakeYAML is a YAML parser and emitter for the
+      Java programming language (YAML is a data serialization format designed for
+      human readability and interaction with scripting languages).
+    component_name: SnakeYAML
+    component_platform: linux
+    component_programing_language: Java
+    component_version: '2.0'
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.0/snakeyaml-2.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Copyleft license found.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1039571&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.yaml_snakeyaml
+    target_sw: linux
+    vendor: mvn
+    version: '2.0'
+    web_url: https://bitbucket.org/snakeyaml/snakeyaml
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - EPL-1.0
+  - GPL-2.0-or-later
+  - LGPL-2.1-or-later
+  name: SnakeYAML
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - '2.0'
+  mimer:
+    linking: Classpath
+    product_number: CAX1056807
+    product_version_label: '2.0'
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'

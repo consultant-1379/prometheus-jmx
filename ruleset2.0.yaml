@@ -1,0 +1,350 @@
+modelVersion: 2.0
+
+docker-images:
+  - adp-release-auto: armdocker.rnd.ericsson.se/sandbox/adp-staging/adp-cicd/bob-adp-release-auto:latest
+  - doc-builder: armdocker.rnd.ericsson.se/sandbox/adp-staging/adp-cicd/bob-docbuilder:41a32e6
+
+properties:
+  # Properties for Docker images
+  - stdout-redirect-version: 1.38.0
+  - image-name: jmx-exporter
+  - image-name-multi-version: jmx-exporter-multi-port
+  - image-name-kf: eric-data-message-bus-kf-jmx-exporter
+  - image-name-zk: eric-data-coordinator-zk-jmx-exporter
+  - image-registry: armdocker.rnd.ericsson.se
+  - image-repo-path-old: aia_releases
+  - image-repo-path-ec-son: proj-ec-son-dev
+  - image-repo-path-mbkf: proj-adp-message-bus-kf-drop
+  - image-repo-path-dczk: proj-adp-eric-data-dc-zk-drop
+  - image-internal-repo-path-old: aia_snapshots
+  - image-internal-repo-path-ec-son: proj-eson-temp
+  - image-internal-repo-path-mbkf: proj-adp-message-bus-kf-internal
+  - image-internal-repo-path-dczk: proj-adp-eric-data-dc-zk-internal
+  - image-full-name-old: ${image-registry}/${image-repo-path-old}/${image-name}
+  - image-full-name-ec-son: ${image-registry}/${image-repo-path-ec-son}/${image-name-multi-version}
+  - image-full-name-mbkf: ${image-registry}/${image-repo-path-mbkf}/${image-name-kf}
+  - image-full-name-dczk: ${image-registry}/${image-repo-path-dczk}/${image-name-zk}
+  - image-internal-full-name-old: ${image-registry}/${image-internal-repo-path-old}/${image-name}
+  - image-internal-full-name-ec-son: ${image-registry}/${image-internal-repo-path-ec-son}/${image-name-multi-version}
+  - image-internal-full-name-mbkf: ${image-registry}/${image-internal-repo-path-mbkf}/${image-name-kf}
+  - image-internal-full-name-dczk: ${image-registry}/${image-internal-repo-path-dczk}/${image-name-zk}
+  - source-product-number: CAV101844
+  - image-file-product-number: CXC2012016
+  - git-clone-url: https://eadphub@gerrit-gamma.gic.ericsson.se/a/AIA/microservices/prometheus-jmx
+  - stdout-redirect-tar-url: https://arm.seli.gic.ericsson.se/artifactory/proj-adp-log-release/com/ericsson/bss/adp/log/stdout-redirect/${stdout-redirect-version}/eric-log-libstdout-redirect-golang-cxa30176-${stdout-redirect-version}.x86_64.tar
+  # Other properties
+  - gerrit-url: "https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/AIA/microservices/prometheus-jmx"
+  - docker-params: "--workdir ${env.PWD}/src"
+  - gitca-repo-name: "adp-message-bus-kf-jmx-exporter"
+  - aca-container-name: "adp-message-bus-kf"
+  - fossa-team-name: PDL-Koopa-Troopas
+  - fossa-jmx-project-name: JMX-PROM-0.20.0
+  - jmx-dependency-file-name: doc/jmx-dependencies-tmp.yaml
+  - jmx-dependency-orig-file-name:  doc/jmx-dependencies.yaml
+  - jmx-license-agreement-file-path: doc/license.agreement.json
+  - jmx-fossa-report-name:  doc/fossa-jmx-exporter-report.json
+  - fossa-server-endpoint:  https://scasfossa.internal.ericsson.com
+  - fossa-jmx-revision: "v1.0.2"
+
+env:
+  - RELEASE (default=true)
+  - PWD
+  - DOCKER_SINGLE_PORT (default=jmx-single-port)
+  - DOCKER_MULTI_PORT (default=jmx-multi-port)
+  - MUNIN_TOKEN
+  - DEBUG (default=false)
+  - GERRIT_PATCHSET_REVISION (default=HEAD)
+  - RELEASED_ARTIFACTS_REPO_API_TOKEN
+  - MUNIN_DRY_RUN
+  - MUNIN_RELEASE_CANDIDATE
+  - API_TOKEN
+  - GERRIT_USERNAME
+  - GERRIT_PASSWORD
+  - ACA_USERNAME
+  - ACA_PASSWORD
+  - SCAS_TOKEN
+  - FOSSA_API_KEY
+
+var:
+  - version
+  - commithash
+  - gitroot
+  - submodparam
+  - image-internal-full-name-old
+  - image-internal-full-name-ec-son
+  - image-internal-full-name-mbkf
+  - image-internal-full-name-dczk
+  - IMAGE_CREATED
+  - rstate
+  - docker-image-jmx-sha256
+  - released-version-without-build-number
+rules:
+  # Make sure repo is clean
+  clean:
+    - task: rm
+      cmd:
+        - rm -rf .bob/
+        - rm -rf build/
+  # Hackish way to make the docker mount the git root of the submodule
+  # Bob requires non-empty variables, so we have to keep  some harmless
+  # dummy value for var.submodule
+  dockerflags-if-submodule:
+    - task: gitroot
+      cmd:
+        - git rev-parse --show-superproject-working-tree >  .bob/var.gitroot
+        - test ! -s .bob/var.gitroot && echo 'not-a-submodule' > .bob/var.gitroot || true
+    - task: volumeflags
+      cmd:
+        - echo '-l empty.submodparam' > .bob/var.submodparam
+        - /bin/sh -c \
+          'if [ -d "${var.gitroot}" ];then echo "--volume ${var.gitroot}:${var.gitroot}" > .bob/var.submodparam; fi'
+  # Generate version, save commit hash
+  common-init:
+    - rule: dockerflags-if-submodule
+    - task: version
+      docker-image: adp-release-auto
+      docker-flags:
+        - "${var.submodparam}"
+      cmd: generate-version --is-release ${env.RELEASE} --output version
+    - task: commit
+      docker-image: adp-release-auto
+      docker-flags:
+        - "${var.submodparam}"
+      cmd: git rev-parse --short HEAD > .bob/var.commithash
+    - task: rstate
+      docker-image: adp-release-auto
+      docker-flags:
+        - "${var.submodparam}"
+      cmd: get_rstate.py ${var.version} > .bob/var.rstate
+  init:
+    - rule: common-init
+    - task: image-internal-full-name-old
+      cmd: echo "${image-internal-full-name-old}" > .bob/var.image-internal-full-name-old
+    - task: image-internal-full-name-ec-son
+      cmd: echo "${image-internal-full-name-ec-son}" > .bob/var.image-internal-full-name-ec-son
+    - task: image-internal-full-name-mbkf
+      cmd: echo "${image-internal-full-name-mbkf}" > .bob/var.image-internal-full-name-mbkf
+    - task: image-internal-full-name-dczk
+      cmd: echo "${image-internal-full-name-dczk}" > .bob/var.image-internal-full-name-dczk
+    - task: timestamp
+      cmd: date -u +'%Y-%m-%dT%H:%M:%SZ'  > .bob/var.IMAGE_CREATED
+    - rule: update-stdout-redirect
+  # generate MUNIN release version without build number
+  munin-version:
+    - task: generate-released-version-without-build-number
+      cmd:
+        - echo ${env.MUNIN_RELEASE_CANDIDATE} | cut -d '-' -f 1 > .bob/var.released-version-without-build-number
+  # Run lint to check Dockerfile
+  # Replace echo command with actual linting when/if available
+  lint:
+    - task: image-lint
+      docker-image: adp-release-auto
+      cmd: echo "Lint Dockerfile"
+    - task: markdownlint
+      docker-image: doc-builder
+      cmd: markdownlint --config /etc/markdownlint-cli/adp.yaml $(git ls-files -- \*\.md | grep -v vendor | cat | xargs)
+    - task: vale
+      docker-image: doc-builder
+      cmd: vale --output line --no-wrap $(git ls-files -- \*\.md | grep -v vendor | cat | xargs)
+  # Requires API_TOKEN env variable
+  update-stdout-redirect:
+    - task: fetch
+      cmd: curl -H "X-JFrog-Art-Api:${env.API_TOKEN}" ${stdout-redirect-tar-url} -o .bob/stdout.tar
+    - task: untar
+      cmd: tar -xvf .bob/stdout.tar -C .bob
+    - task: copy-jmx-single-port
+      cmd: cp .bob/stdout-redirect jmx-single-port/files
+    - task: copy-jmx-multi-port
+      cmd: cp .bob/stdout-redirect jmx-multi-port/files
+  # Build docker image
+  image-build:
+    - task: docker-build-single-port
+      cmd: docker build ${env.DOCKER_SINGLE_PORT}
+        --file jmx-single-port/Dockerfile
+        --build-arg PRODUCT_REVISION="${var.rstate}"
+        --build-arg IMAGE_CREATED="${var.IMAGE_CREATED}"
+        --build-arg IMAGE_REVISION="${var.commithash}"
+        --build-arg IMAGE_VERSION="${var.version}"
+        --tag ${var.image-internal-full-name-old}:${var.version}
+        --build-arg REPOSITORY=${gerrit-url}
+        --build-arg COMMIT=${var.commithash}
+        --build-arg APP_VERSION=${var.version}
+    - task: docker-build-multi-port
+      cmd: docker build ${env.DOCKER_MULTI_PORT}
+        --file jmx-multi-port/Dockerfile
+        --build-arg PRODUCT_REVISION="${var.rstate}"
+        --build-arg IMAGE_CREATED="${var.IMAGE_CREATED}"
+        --build-arg IMAGE_REVISION="${var.commithash}"
+        --build-arg IMAGE_VERSION="${var.version}"
+        --tag ${var.image-internal-full-name-ec-son}:${var.version}
+        --build-arg REPOSITORY=${gerrit-url}
+        --build-arg COMMIT=${var.commithash}
+        --build-arg APP_VERSION=${var.version}
+
+  # Container structure tests
+  image-test:
+    - task: set-permission
+      cmd: chmod 755 ./${env.DOCKER_SINGLE_PORT}/test/setup.sh
+        && chmod 755 ./${env.DOCKER_SINGLE_PORT}/test/runtests.sh
+    - task: setup-structure-test
+      cmd: ./${env.DOCKER_SINGLE_PORT}/test/setup.sh
+    - task: run-structure-test
+      cmd: ./${env.DOCKER_SINGLE_PORT}/test/runtests.sh ${var.image-internal-full-name-old}:${var.version}
+  # Push image to internal repo
+  image-push-internal:
+    - task: image-push-internal-old
+      cmd: docker push ${var.image-internal-full-name-old}:${var.version}
+    - task: image-push-internal-ec-son
+      cmd: docker push ${var.image-internal-full-name-ec-son}:${var.version}
+    - task: image-tag-internal-mbkf
+      cmd: docker tag ${var.image-internal-full-name-old}:${var.version} ${var.image-internal-full-name-mbkf}:${var.version}
+    - task: image-push-internal-mbkf
+      cmd: docker push ${var.image-internal-full-name-mbkf}:${var.version}
+    - task: image-tag-internal-dczk
+      cmd: docker tag ${var.image-internal-full-name-old}:${var.version} ${var.image-internal-full-name-dczk}:${var.version}
+    - task: image-push-internal-mbkf
+      cmd: docker push ${var.image-internal-full-name-dczk}:${var.version}
+  # Publish docker images to drop repository
+  # Call publish only when merged to master
+  image-publish:
+    - task: image-pull-internal
+      cmd: docker pull ${var.image-internal-full-name-old}:${var.version}
+    - task: image-pull-internal-ec-son
+      cmd: docker pull ${var.image-internal-full-name-ec-son}:${var.version}
+    - task: image-tag-public-ec-son
+      cmd: docker tag ${var.image-internal-full-name-ec-son}:${var.version} ${image-full-name-ec-son}:${var.version}
+    - task: image-push-public-ec-son
+      cmd: docker push ${image-full-name-ec-son}:${var.version}
+    - task: image-tag-public-old
+      cmd: docker tag ${var.image-internal-full-name-old}:${var.version} ${image-full-name-old}:${var.version}
+    - task: image-push-public-old
+      cmd: docker push ${image-full-name-old}:${var.version}
+    - task: image-tag-public-mbkf
+      cmd: docker tag ${var.image-internal-full-name-old}:${var.version} ${image-full-name-mbkf}:${var.version}
+    - task: image-push-public-mbkf
+      cmd: docker push ${image-full-name-mbkf}:${var.version}
+    - task: image-tag-public-dczk
+      cmd: docker tag ${var.image-internal-full-name-old}:${var.version} ${image-full-name-dczk}:${var.version}
+    - task: image-push-public-dczk
+      cmd: docker push ${image-full-name-dczk}:${var.version}
+  # Create product versions from product structure and FOSS dependencies
+  munin-update-version:
+    - task: create-products
+      docker-image: adp-release-auto
+      cmd: munin create-versions -t ${env.MUNIN_TOKEN} -c doc/product_structure.yaml -v ${var.version} --debug ${env.DEBUG}
+  # Create and push git tag. Example v1.0.0-55
+  create-git-tag:
+    - task: git-tag
+      cmd:
+        - git tag -a "v${var.version}" -m "Release ${var.version}" ${env.GERRIT_PATCHSET_REVISION}
+        - git push origin "v${var.version}"
+  # Fetch checksums of images
+  fetch-artifact-checksums:
+    # Get artifact hashs
+    - task: init
+      docker-image: adp-release-auto
+      cmd:
+        - arm get-checksum --url https://arm.seli.gic.ericsson.se/artifactory/proj-adp-message-bus-kf-drop-docker-global/proj-adp-message-bus-kf-drop/eric-data-message-bus-kf-jmx-exporter/${env.MUNIN_RELEASE_CANDIDATE}/manifest.json --sha256 --apikey ${env.RELEASED_ARTIFACTS_REPO_API_TOKEN} --output .bob/var.docker-image-jmx-sha256
+        - cat .bob/var.docker-image-jmx-sha256
+    - task: get-commit-hash
+      docker-image: adp-release-auto
+      cmd:
+        - git rev-list -n 1 v${env.MUNIN_RELEASE_CANDIDATE} > .bob/var.commithash
+        - cat .bob/var.commithash
+
+  # Set artifact URLs in PLMS via GitCA
+  munin-connect-ca-artifact:
+    - task: archive-commit
+      docker-image: adp-release-auto
+      cmd: gitca register-plm
+        --commithash ${var.commithash}
+        --product-number ${source-product-number}
+        --version ${var.released-version-without-build-number}
+        --name ${gitca-repo-name}
+        --username ${env.GERRIT_USERNAME}
+        --password ${env.GERRIT_PASSWORD}
+        --dry-run ${env.MUNIN_DRY_RUN}
+
+  # Set artifact URLs in PLMS via ACA (Artifactory Certified Archive)
+  upload-and-register-artifacts-in-aca:
+    - task: pull-down-release-image
+      cmd: docker pull armdocker.rnd.ericsson.se/proj-adp-message-bus-kf-drop/eric-data-message-bus-kf-jmx-exporter:${env.MUNIN_RELEASE_CANDIDATE}
+    - task: retag-image
+      cmd: docker tag armdocker.rnd.ericsson.se/proj-adp-message-bus-kf-drop/eric-data-message-bus-kf-jmx-exporter:${env.MUNIN_RELEASE_CANDIDATE} lib.sw.ericsson.net/${aca-container-name}/${image-name-kf}:${env.MUNIN_RELEASE_CANDIDATE}
+    - task: login-to-docker-registry
+      cmd: docker login -u eadphub -p ${env.ACA_PASSWORD} lib.sw.ericsson.net
+    - task: push-release-image-to-ACA
+      cmd: docker push lib.sw.ericsson.net/${aca-container-name}/${image-name-kf}:${env.MUNIN_RELEASE_CANDIDATE}
+    - task: register-plm
+      docker-image: adp-release-auto
+      cmd: aca register-plm
+           --dry-run ${env.MUNIN_DRY_RUN}
+           --artifact-id docker://${aca-container-name}/${image-name-kf}:${env.MUNIN_RELEASE_CANDIDATE}
+           --product-number ${image-file-product-number}
+           --product-version ${var.released-version-without-build-number}
+           --debug
+           --username ${env.ACA_USERNAME}
+           --password '${env.ACA_PASSWORD}'
+
+  # Release products in PLMS
+  munin-release-version:
+    - task: release-versions
+      docker-image: adp-release-auto
+      cmd:
+        - munin release-versions
+          -t ${env.MUNIN_TOKEN}
+          -c doc/product_structure.yaml
+          -v ${var.released-version-without-build-number}
+          --dry-run ${env.MUNIN_DRY_RUN}
+          --wait-prim-target 20
+
+  fossa-report-attribution:
+    - task: get-fossa-report-jmx
+      docker-flags:
+        - "--env FOSSA_API_KEY=${env.FOSSA_API_KEY}"
+      docker-image: adp-release-auto
+      cmd: fossa report attribution
+        --endpoint ${fossa-server-endpoint}
+        --project ${fossa-jmx-project-name}
+        --revision ${fossa-jmx-revision}
+        --json > ${jmx-fossa-report-name}
+
+  fossa-scan-dependency-update:
+    - task: mbkf-dependency-update
+      docker-image: adp-release-auto
+      cmd: dependencies update
+        --fossa-report ${jmx-fossa-report-name}
+        --dependencies ${}
+        --link-dependencies
+        --sort
+
+  fossa-scan-validate:
+    - task: mbkf-dependency-validate
+      docker-image: adp-release-auto
+      cmd: dependencies validate
+        --dependencies ${jmx-dependency-orig-file-name}
+        --allow-esw4
+
+  scan-scas:
+    - task: scan-scas-kafka
+      docker-image: adp-release-auto
+      cmd: dependencies update
+        --dependencies ${jmx-dependency-file-name}
+        --scan-scas
+        --scas-refresh-token ${env.SCAS_TOKEN}
+        --sort
+        --parallel-processes 10
+
+  generate-license-agreement:
+    - task: generate-license
+      docker-image: adp-release-auto
+      cmd: license-agreement generate
+        --fossa-report ${jmx-fossa-report-name}
+        --dependencies ${jmx-dependency-orig-file-name}
+        --output ${jmx-license-agreement-file-path}
+
+  license-agreement-validate:
+    - task: license-agreement-validate
+      docker-image: adp-release-auto
+      cmd: license-agreement validate
+        --license-agreement ${jmx-license-agreement-file-path}

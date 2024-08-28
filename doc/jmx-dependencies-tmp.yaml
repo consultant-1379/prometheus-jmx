@@ -1,0 +1,1448 @@
+modelVersion: '3.0'
+dependencies:
+- ID: io.prometheus.jmx:collector+0.20.0
+  additional_info:
+    fossa-attribution:
+      Description: See https://github.com/prometheus/jmx_exporter/blob/master/README.md
+      Package: io.prometheus.jmx:collector
+      Source: mvn
+      Version: 0.20.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus JMX Exporter - Collector
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/jmx/collector/0.20.0/collector-0.20.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '13/CTX1022177'
+    community_link: http://github.com/prometheus/jmx_exporter
+    community_name: http://github.com/prometheus/jmx_exporter
+    community_url: http://github.com/prometheus/jmx_exporter
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Prometheus JMX Exporter - Collector
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.20.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/prometheus/jmx/collector/0.20.0/collector-0.20.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus.jmx_collector
+    target_sw: linux
+    vendor: mvn
+    version: 0.20.0
+    web_url: http://github.com/prometheus/jmx_exporter
+  licenses:
+  - Apache-2.0
+  name: Prometheus JMX Exporter - Collector
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.20.0
+  mimer:
+    linking: Classpath
+    product_number: 'CTX1022177'
+    product_version_label: 0.20.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  additional_info:
+    fossa-attribution:
+      Description: See https://github.com/prometheus/jmx_exporter/blob/master/README.md
+      Package: io.prometheus.jmx:jmx_prometheus_common
+      Source: mvn
+      Version: 0.20.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus JMX Exporter - Common
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_common/0.20.0/jmx_prometheus_common-0.20.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '13/CTX1022177'
+    community_link: http://github.com/prometheus/jmx_exporter
+    community_name: http://github.com/prometheus/jmx_exporter
+    community_url: http://github.com/prometheus/jmx_exporter
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: Prometheus JMX Exporter - Common
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.20.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_common/0.20.0/jmx_prometheus_common-0.20.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus.jmx_jmx_prometheus_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.20.0
+    web_url: http://github.com/prometheus/jmx_exporter
+  licenses:
+  - Apache-2.0
+  name: Prometheus JMX Exporter - Common
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 0.20.0
+  mimer:
+    linking: Classpath
+    product_number: 'CTX1022177'
+    product_version_label: 0.20.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Core instrumentation library for the simpleclient.
+      Package: io.prometheus:simpleclient
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - CC0-1.0
+      Title: Prometheus Java Simpleclient
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient/0.16.0/simpleclient-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient
+  licenses:
+  - Apache-2.0
+  - CC0-1.0
+  name: Prometheus Java Simpleclient
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_common+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Common code used by various modules of the Simpleclient.
+      Package: io.prometheus:simpleclient_common
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Common
+      DownloadURL: https://arm.seli.gic.ericsson.se/artifactory/proj-eof-dev/io/prometheus/simpleclient_common/0.16.0/simpleclient_common-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_common
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Common
+  primary:
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_hotspot+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Collectors of data from Java Hotspot.
+      Package: io.prometheus:simpleclient_hotspot
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Hotspot
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot/0.16.0/simpleclient_hotspot-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_hotspot
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_hotspot
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Hotspot
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_httpserver+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: Httpserver exposition for the simpleclient.
+      Package: io.prometheus:simpleclient_httpserver
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Simpleclient Httpserver
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver/0.16.0/simpleclient_httpserver-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_httpserver
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_httpserver
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Simpleclient Httpserver
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: io.prometheus:simpleclient_tracer_common+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_common
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - Common
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_common/0.16.0/simpleclient_tracer_common-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_common
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_common
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - Common
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_tracer_otel+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_otel
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - OpenTelemetry
+      DownloadURL: https://arm.epk.ericsson.se/artifactory/proj-ema-remote/io/prometheus/simpleclient_tracer_otel/0.16.0/simpleclient_tracer_otel-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_otel
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - OpenTelemetry
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: io.prometheus:simpleclient_tracer_otel_agent+0.16.0
+  additional_info:
+    fossa-attribution:
+      Description: The fossa information is fetched from  FOSSA service. Don't Edit!
+      Package: io.prometheus:simpleclient_tracer_otel_agent
+      Source: mvn
+      Version: 0.16.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: Prometheus Java Span Context Supplier - OpenTelemetry Agent
+      DownloadURL: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel_agent/0.16.0/simpleclient_tracer_otel_agent-0.16.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 18/CTX1022207
+    community_link: https://github.com/prometheus/client_java
+    community_name: https://github.com/prometheus/client_java
+    community_url: https://github.com/prometheus/client_java
+    component_comment: ''
+    component_highlevel_description: Prometheus instrumentation library for JVM applications.
+    component_name: Prometheus JVM Client
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 0.16.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/prometheus/client_java/archive/parent-0.16.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1015933&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Ireland
+    crypto: 'NO'
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: io.prometheus_simpleclient_tracer_otel_agent
+    target_sw: linux
+    vendor: mvn
+    version: 0.16.0
+    web_url: https://repo1.maven.org/maven2/io/prometheus/simpleclient_tracer_otel_agent
+  licenses:
+  - Apache-2.0
+  name: Prometheus Java Span Context Supplier - OpenTelemetry Agent
+  primary:
+  - io.prometheus:simpleclient+0.16.0
+  - io.prometheus:simpleclient_httpserver+0.16.0
+  - io.prometheus.jmx:collector+0.20.0
+  - io.prometheus.jmx:jmx_prometheus_common+0.20.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 0.16.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1022207
+    product_version_label: 0.16.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: junit:junit+4.13.2
+  additional_info:
+    fossa-attribution:
+      Description: JUnit is a unit testing framework for Java, created by Erich Gamma
+        and Kent Beck.
+      Package: junit:junit
+      Source: mvn
+      Version: 4.13.2
+      Hash: ''
+      licenses:
+      - EPL-1.0
+      Title: JUnit
+      DownloadURL: https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 35/CAX1053949
+    community_link: https://github.com/junit-team/junit4
+    community_name: https://github.com/junit-team/junit4
+    community_url: https://github.com/junit-team/junit4
+    component_comment: ''
+    component_highlevel_description: JUnit is a simple framework for writing and running
+      automated tests. As a political gesture, it celebrates programmers testing their
+      own software.
+    component_name: JUnit
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 4.13.2
+    licenses:
+    - FAL1159013/10 (Eclipse Public License 1.0 (EPL-1.0))
+    src_download_link: https://github.com/junit-team/junit4/archive/r4.13.2.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=996976&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: junit_junit
+    target_sw: linux
+    vendor: mvn
+    version: 4.13.2
+    web_url: http://junit.org
+  licenses:
+  - EPL-1.0
+  name: JUnit
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 4.13.2
+  mimer:
+    linking: Classpath
+    product_number: CAX1053949
+    product_version_label: 4.13.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: net.bytebuddy:byte-buddy+1.12.21
+  additional_info:
+    fossa-attribution:
+      Description: Byte Buddy is a Java library for creating Java classes at run time.        This
+        artifact is a build of Byte Buddy with all ASM dependencies repackaged into
+        its own name space.
+      Package: net.bytebuddy:byte-buddy
+      Source: mvn
+      Version: 1.12.21
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      Title: Byte Buddy (without dependencies)
+      DownloadURL: https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 83/CAX1059816
+    community_link: https://github.com/raphw/byte-buddy
+    community_name: https://github.com/raphw/byte-buddy
+    community_url: https://github.com/raphw/byte-buddy
+    component_comment: ''
+    component_highlevel_description: Byte Buddy is a code generation and manipulation
+      library for creating and modifying Java classes during the runtime of a Java
+      application and without the help of a compiler.
+    component_name: Byte Buddy
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.12.21
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/raphw/byte-buddy/archive/byte-buddy-1.12.21.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1043448&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Norway
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: net.bytebuddy_byte-buddy
+    target_sw: linux
+    vendor: mvn
+    version: 1.12.21
+    web_url: https://repo1.maven.org/maven2/net/bytebuddy/byte-buddy
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  name: Byte Buddy (without dependencies)
+  primary:
+  - org.assertj:assertj-core+3.24.2
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 1.12.21
+  mimer:
+    linking: Classpath
+    product_number: CAX1059816
+    product_version_label: 1.12.21
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.apiguardian:apiguardian-api+1.1.2
+  additional_info:
+    fossa-attribution:
+      Description: '@API Guardian'
+      Package: org.apiguardian:apiguardian-api
+      Source: mvn
+      Version: 1.1.2
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: org.apiguardian:apiguardian-api
+      DownloadURL: https://repo1.maven.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 4/CTX1024798
+    community_link: https://github.com/apiguardian-team/apiguardian
+    community_name: https://github.com/apiguardian-team/apiguardian
+    community_url: https://github.com/apiguardian-team/apiguardian
+    component_comment: ''
+    component_highlevel_description: Library that provides the @API annotation that
+      is used to annotate public types, methods, constructors, and fields within a
+      framework or application in order to publish their status and level of stability
+      and to indicate how they are intended to be used by consumers of the API.
+    component_name: Apiguardian API
+    component_platform: linux
+    component_programing_language: Kotlin
+    component_version: 1.1.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/apiguardian-team/apiguardian/archive/r1.1.2.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Product version is older than 18 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=995985&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Germany
+    crypto: No Encryption
+    programming_language: Kotlin
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.apiguardian_apiguardian-api
+    target_sw: linux
+    vendor: mvn
+    version: 1.1.2
+    web_url: https://github.com/apiguardian-team/apiguardian
+  licenses:
+  - Apache-2.0
+  name: org.apiguardian:apiguardian-api
+  primary:
+  - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.1.2
+  mimer:
+    linking: Classpath
+    product_number: CTX1024798
+    product_version_label: 1.1.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.assertj:assertj-core+3.24.2
+  additional_info:
+    fossa-attribution:
+      Description: Rich and fluent assertions for testing in Java
+      Package: org.assertj:assertj-core
+      Source: mvn
+      Version: 3.24.2
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: AssertJ Core
+      DownloadURL: https://repo1.maven.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 30/CAX1059199
+    community_link: https://github.com/joel-costigliola/assertj-core
+    community_name: https://github.com/joel-costigliola/assertj-core
+    community_url: https://github.com/joel-costigliola/assertj-core
+    component_comment: ''
+    component_highlevel_description: AssertJ core is a Java library that provides
+      a fluent interface for writing assertions. Its main goal is to improve test
+      code readability and make maintenance of tests easier.
+    component_name: AssertJ Core
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 3.24.2
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/assertj/assertj/archive/refs/tags/assertj-build-3.24.2.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=931673&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: New Zealand
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.assertj_assertj-core
+    target_sw: linux
+    vendor: mvn
+    version: 3.24.2
+    web_url: https://assertj.github.io/doc/#assertj-core
+  licenses:
+  - Apache-2.0
+  name: AssertJ Core
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 3.24.2
+  mimer:
+    linking: Classpath
+    product_number: CAX1059199
+    product_version_label: 3.24.2
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: org.hamcrest:hamcrest-core+1.3
+  additional_info:
+    fossa-attribution:
+      Description: Core Hamcrest API - deprecated, please use "hamcrest" instead
+      Package: org.hamcrest:hamcrest-core
+      Source: mvn
+      Version: '1.3'
+      Hash: ''
+      licenses:
+      - BSD-2-Clause
+      Title: Hamcrest Core
+      DownloadURL: https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 2/CAX1054964
+    community_link: http://code.google.com/p/hamcrest/
+    community_name: http://code.google.com/p/hamcrest/
+    community_url: http://code.google.com/p/hamcrest/
+    component_comment: ''
+    component_highlevel_description: Hamcrest is a library of matchers for building
+      test expressions. It provides a library of matcher objects allowing 'match'
+      rules to be defined declaratively, to be used in other frameworks. Hamcrest
+      has been ported to Java, C++, Objective-C, Python, PHP and Erlang.
+    component_name: Java Hamcrest
+    component_platform: linux
+    component_programing_language: Java
+    component_version: '1.3'
+    licenses:
+    - FAL1159003/1 (BSD 2-Clause "Simplified" License (BSD-2-Clause))
+    src_download_link: http://code.google.com/p/hamcrest/downloads/list
+    stako_decision_reason: ESW
+    stako: ESW4
+    stako_comment: Product version is older than 54 months
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=14135&id-filter=equals&rowDisplay=Card-Simple
+    recode: RE1
+    retext: PRODUCT VERSION IS OLDER THAN 54 MONTHS
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.hamcrest_hamcrest-core
+    target_sw: linux
+    vendor: mvn
+    version: '1.3'
+    web_url: http://hamcrest.org/JavaHamcrest/
+  licenses:
+  - BSD-2-Clause
+  name: Hamcrest Core
+  primary:
+  - junit:junit+4.13.2
+  subcomponent: true
+  type: FOSS
+  versions:
+  - '1.3'
+  mimer:
+    linking: Classpath
+    product_number: CAX1054964
+    product_version_label: '1.3'
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.junit.jupiter:junit-jupiter+5.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-jupiter" of JUnit 5.
+      Package: org.junit.jupiter:junit-jupiter
+      Source: mvn
+      Version: 5.10.0
+      Hash: ''
+      licenses:
+      - EPL-2.0
+      - unknown
+      Title: JUnit Jupiter (Aggregator)
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '46/CAX1053949'
+    community_link: https://junit.org/junit5/
+    community_name: https://junit.org/junit5/
+    community_url: https://junit.org/junit5/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: JUnit
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 5.10.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.jupiter_junit-jupiter
+    target_sw: linux
+    vendor: mvn
+    version: 5.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+  - EPL-2.0
+  - unknown
+  name: JUnit Jupiter (Aggregator)
+  primary:
+  - this
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 5.10.0
+  mimer:
+    linking: Classpath
+    product_number: 'CAX1053949'
+    product_version_label: 5.10.0
+    selected_licenses:
+    - EPL-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
+- ID: org.junit.jupiter:junit-jupiter-api+5.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-jupiter-api" of JUnit 5.
+      Package: org.junit.jupiter:junit-jupiter-api
+      Source: mvn
+      Version: 5.10.0
+      Hash: ''
+      licenses:
+      - EPL-2.0
+      Title: JUnit Jupiter API
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 46/CAX1053949
+    community_link: https://github.com/junit-team/junit5
+    community_name: https://github.com/junit-team/junit5
+    community_url: https://github.com/junit-team/junit5
+    component_comment: ''
+    component_highlevel_description: JUnit is a simple framework for writing and running
+      automated tests. As a political gesture, it celebrates programmers testing their
+      own software.
+    component_name: junit5
+    component_platform: linux
+    component_programing_language: Java
+    component_version: R5.10.0
+    licenses:
+    - FAL1159013/20 (Eclipse Public License 2.0 (EPL-2.0))
+    src_download_link: https://github.com/junit-team/junit5/archive/r5.10.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1057430&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.jupiter_junit-jupiter-api
+    target_sw: linux
+    vendor: mvn
+    version: 5.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+  - EPL-2.0
+  name: JUnit Jupiter API
+  primary:
+  - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 5.10.0
+  mimer:
+    linking: Classpath
+    product_number: CAX1053949
+    product_version_label: 5.10.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.junit.jupiter:junit-jupiter-engine+5.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-jupiter-engine" of JUnit 5.
+      Package: org.junit.jupiter:junit-jupiter-engine
+      Source: mvn
+      Version: 5.10.0
+      Hash: ''
+      licenses:
+        - EPL-2.0
+      Title: JUnit Jupiter Engine
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 46/CAX1053949
+    community_link: https://github.com/junit-team/junit5
+    community_name: https://github.com/junit-team/junit5
+    community_url: https://github.com/junit-team/junit5
+    component_comment: ''
+    component_highlevel_description: JUnit is a simple framework for writing and running
+      automated tests. As a political gesture, it celebrates programmers testing their
+      own software.
+    component_name: junit5
+    component_platform: linux
+    component_programing_language: Java
+    component_version: R5.10.0
+    licenses:
+      - FAL1159013/20 (Eclipse Public License 2.0 (EPL-2.0))
+    src_download_link: https://github.com/junit-team/junit5/archive/r5.10.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1057430&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+      - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.jupiter_junit-jupiter-engine
+    target_sw: linux
+    vendor: mvn
+    version: 5.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+    - EPL-2.0
+  name: JUnit Jupiter Engine
+  primary:
+    - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: false
+  type: FOSS
+  versions:
+    - 5.10.0
+  mimer:
+    linking: Classpath
+    product_number: CAX1053949
+    product_version_label: 5.10.0
+    selected_licenses:
+      - EPL-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.junit.jupiter:junit-jupiter-params+5.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-jupiter-params" of JUnit 5.
+      Package: org.junit.jupiter:junit-jupiter-params
+      Source: mvn
+      Version: 5.10.0
+      Hash: ''
+      licenses:
+      - EPL-2.0
+      Title: JUnit Jupiter Params
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0-sources.jar
+  bazaar:
+    register: 'yes'
+    prim: '46/CAX1053949'
+    community_link: https://junit.org/junit5/
+    community_name: https://junit.org/junit5/
+    community_url: https://junit.org/junit5/
+    component_comment: ''
+    component_highlevel_description: ''
+    component_name: JUnit
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 5.10.0
+    licenses: []
+    src_download_link: https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: ''
+    recode: ''
+    retext: ''
+    country: ''
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.jupiter_junit-jupiter-params
+    target_sw: linux
+    vendor: mvn
+    version: 5.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+  - EPL-2.0
+  name: JUnit Jupiter Params
+  primary:
+  - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 5.10.0
+  mimer:
+    linking: Classpath
+    product_number: 'CAX1053949'
+    product_version_label: 5.10.0
+    selected_licenses:
+    - EPL-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.junit.platform:junit-platform-commons+1.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-platform-commons" of JUnit 5.
+      Package: org.junit.platform:junit-platform-commons
+      Source: mvn
+      Version: 1.10.0
+      Hash: ''
+      licenses:
+      - EPL-2.0
+      - unknown
+      Title: JUnit Platform Commons
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 29/CAX1053949
+    community_link: http://junit.org/junit5/
+    community_name: http://junit.org/junit5/
+    community_url: http://junit.org/junit5/
+    component_comment: ''
+    component_highlevel_description: JUnit is a simple framework for writing and running
+      automated tests. As a political gesture, it celebrates programmers testing their
+      own software.
+    component_name: JUnit
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 1.7.1
+    licenses:
+    - FAL1159013/20 (Eclipse Public License 2.0 (EPL-2.0))
+    src_download_link: https://repo1.maven.org/maven2/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW4
+    stako_comment: Product version is older than 18 months. Newer versions exists
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=981211&id-filter=equals&rowDisplay=Card-Simple
+    recode: REL
+    retext: PRODUCT VERSION IS OLDER THAN 18 MONTHS. NEWER VERSIONS EXISTS
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.platform_junit-platform-commons
+    target_sw: linux
+    vendor: mvn
+    version: 1.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+  - EPL-2.0
+  - unknown
+  name: JUnit Platform Commons
+  primary:
+  - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: true
+  type: FOSS
+  versions:
+  - 1.10.0
+  mimer:
+    linking: Classpath
+    product_number: CAX1053949
+    product_version_label: 1.10.0
+    selected_licenses:
+    - EPL-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.junit.platform:junit-platform-engine+1.10.0
+  additional_info:
+    fossa-attribution:
+      Description: Module "junit-platform-engine" of JUnit 5.
+      Package: org.junit.platform:junit-platform-engine
+      Source: mvn
+      Version: 1.10.0
+      Hash: ''
+      licenses:
+        - EPL-2.0
+        - unknown
+      Title: JUnit Platform Engine API
+      DownloadURL: https://repo1.maven.org/maven2/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 50/CAX1053949
+    community_link: https://junit.org/junit5/
+    community_name: https://junit.org/junit5/
+    community_url: https://junit.org/junit5/
+    component_comment: ''
+    component_highlevel_description: '? The 5th major version of the programmer-friendly
+      testing framework for Java and the JVM'
+    component_name: junit5
+    component_platform: linux
+    component_programing_language: Java
+    component_version: 5.10.0
+    licenses:
+      - FAL1159013/20 (Eclipse Public License 2.0 (EPL-2.0))
+    src_download_link: https://github.com/junit-team/junit5/archive/refs/tags/r5.10.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1079855&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: ''
+    crypto: ''
+    programming_language: Java
+  encryptions:
+    used:
+      - ''
+  evms:
+    register: 'yes'
+    product_name: org.junit.platform_junit-platform-engine
+    target_sw: linux
+    vendor: mvn
+    version: 1.10.0
+    web_url: https://junit.org/junit5/
+  licenses:
+    - EPL-2.0
+    - unknown
+  name: JUnit Platform Engine API
+  primary:
+    - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: false
+  type: FOSS
+  versions:
+    - 1.10.0
+  mimer:
+    linking: Classpath
+    product_number: CAX1053949
+    product_version_label: 1.10.0
+    selected_licenses:
+      - EPL-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.opentest4j:opentest4j+1.3.0
+  additional_info:
+    fossa-attribution:
+      Description: Open Test Alliance for the JVM
+      Package: org.opentest4j:opentest4j
+      Source: mvn
+      Version: 1.3.0
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      Title: org.opentest4j:opentest4j
+      DownloadURL: https://repo1.maven.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 5/CTX1025327
+    community_link: https://github.com/ota4j-team/opentest4j
+    community_name: https://github.com/ota4j-team/opentest4j
+    community_url: https://github.com/ota4j-team/opentest4j
+    component_comment: ''
+    component_highlevel_description: Open Test Alliance for the JVM
+    component_name: opentest4j
+    component_platform: linux
+    component_programing_language: Java
+    component_version: R1.3.0
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://github.com/ota4j-team/opentest4j/archive/r1.3.0.tar.gz
+    stako_decision_reason: ESW
+    stako: ESW2
+    stako_comment: ''
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1058243&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: Germany
+    crypto: ''
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.opentest4j_opentest4j
+    target_sw: linux
+    vendor: mvn
+    version: 1.3.0
+    web_url: https://github.com/ota4j-team/opentest4j
+  licenses:
+  - Apache-2.0
+  name: org.opentest4j:opentest4j
+  primary:
+  - org.junit.jupiter:junit-jupiter+5.10.0
+  subcomponent: false
+  type: FOSS
+  versions:
+  - 1.3.0
+  mimer:
+    linking: Classpath
+    product_number: CTX1025327
+    product_version_label: 1.3.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'False'
+- ID: org.yaml:snakeyaml+2.0
+  additional_info:
+    fossa-attribution:
+      Description: YAML 1.1 parser and emitter for Java
+      Package: org.yaml:snakeyaml
+      Source: mvn
+      Version: '2.0'
+      Hash: ''
+      licenses:
+      - Apache-2.0
+      - BSD-3-Clause
+      - EPL-1.0
+      - GPL-2.0-or-later
+      - LGPL-2.1-or-later
+      Title: SnakeYAML
+      DownloadURL: https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.0/snakeyaml-2.0-sources.jar
+  bazaar:
+    register: 'no'
+    prim: 27/CAX1056807
+    community_link: https://bitbucket.org/snakeyaml/snakeyaml
+    community_name: https://bitbucket.org/snakeyaml/snakeyaml
+    community_url: https://bitbucket.org/snakeyaml/snakeyaml
+    component_comment: ''
+    component_highlevel_description: SnakeYAML is a YAML parser and emitter for the
+      Java programming language (YAML is a data serialization format designed for
+      human readability and interaction with scripting languages).
+    component_name: SnakeYAML
+    component_platform: linux
+    component_programing_language: Java
+    component_version: '2.0'
+    licenses:
+    - FAL1159004/20 (Apache License 2.0 (Apache-2.0))
+    src_download_link: https://repo1.maven.org/maven2/org/yaml/snakeyaml/2.0/snakeyaml-2.0-sources.jar
+    stako_decision_reason: ESW
+    stako: ESW3
+    stako_comment: Copyleft license found.
+    bazaarurl: https://scas.internal.ericsson.com/search3pp?id=1039571&id-filter=equals&rowDisplay=Card-Simple
+    recode: ''
+    retext: ''
+    country: United States
+    crypto: No Encryption
+    programming_language: Java
+  encryptions:
+    used:
+    - ''
+  evms:
+    register: 'yes'
+    product_name: org.yaml_snakeyaml
+    target_sw: linux
+    vendor: mvn
+    version: '2.0'
+    web_url: https://bitbucket.org/snakeyaml/snakeyaml
+  licenses:
+  - Apache-2.0
+  - BSD-3-Clause
+  - EPL-1.0
+  - GPL-2.0-or-later
+  - LGPL-2.1-or-later
+  name: SnakeYAML
+  primary:
+  - this
+  subcomponent: false
+  type: FOSS
+  versions:
+  - '2.0'
+  mimer:
+    linking: Classpath
+    product_number: CAX1056807
+    product_version_label: '2.0'
+    selected_licenses:
+    - Apache-2.0
+    obligation: Including the full license text in a prominent place with the software
+      when the FOSS is distributed
+    usage: Use as is
+    primary: 'True'
